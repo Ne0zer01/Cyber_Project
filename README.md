@@ -5,6 +5,7 @@ Avant le déploiement de Vaultwarden, l'environnement Ubuntu a été préparé a
 ### 1. Mise à jour du système
 ```bash
 sudo apt update && sudo apt upgrade -y
+```
 
 ### 2. Installation de l'environnement Docker (V2)
 
