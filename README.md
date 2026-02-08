@@ -56,7 +56,8 @@ Configuration réseau : Exposition du service sur le port 8443 (HTTPS).
 Pour éviter les attaques de type Man-in-the-Middle (MITM) et les erreurs de sécurité du navigateur, un certificat SSL auto-signé a été généré :
 
 ```bash
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes -subj "/CN=localhost"```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes -subj "/CN=localhost"
+```
 
 3. Fichier de déploiement (docker-compose.yml)
 Le fichier a été configuré pour forcer l'utilisation du HTTPS via la variable ROCKET_TLS :
@@ -76,7 +77,8 @@ services:
       - ./cert.pem:/data/cert.pem:ro
       - ./key.pem:/data/key.pem:ro
     ports:
-      - "8443:80"```
+      - "8443:80"
+```
 
 🔒 Hardening et Sécurité Appliquée
 Enforcement HTTPS : Obligation d'utiliser un canal chiffré pour transmettre le Master Password.
@@ -97,7 +99,8 @@ Sauvegarde Administrateur (Disaster Recovery)
 Procédure de backup du volume de données via compression tar :
 
 ```bash
-sudo tar -czvf backup_vaultwarden.tar.gz /opt/vaultwarden/vw-data```
+sudo tar -czvf backup_vaultwarden.tar.gz /opt/vaultwarden/vw-data
+```
 
 🚀 Fonctionnalités validées
 Génération de mots de passe : Création de secrets à haute entropie.
