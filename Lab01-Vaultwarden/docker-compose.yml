@@ -1,0 +1,15 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      - SIGNUPS_ALLOWED=false
+      - DOMAIN=https://localhost:8443
+      - ROCKET_TLS={certs="/data/cert.pem",key="/data/key.pem"}
+    volumes:
+      - ./vw-data:/data
+      - ./cert.pem:/data/cert.pem:ro
+      - ./key.pem:/data/key.pem:ro
+    ports:
+      - "8443:80"

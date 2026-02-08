@@ -1,0 +1,16 @@
+# Ignore les dossiers de données de tous les projets
+**/vw-data/
+**/data/
+
+# Ignore toutes les clés et certificats partout
+**/*.pem
+**/*.key
+**/*.crt
+
+# Ignore les archives et backups
+**/*.tar.gz
+**/*.zip
+
+# Ignore les fichiers de config sensibles
+**/*.env
+**/*.json
