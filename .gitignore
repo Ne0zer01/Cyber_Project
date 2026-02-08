@@ -1,0 +1,14 @@
+# Ne pas envoyer la base de données (contient tes secrets chiffrés)
+vw-data/
+
+# Ne pas envoyer les clés privées et certificats (ton identité SSL)
+*.pem
+
+# Ne pas envoyer les exports de mots de passe
+*.json
+
+# Ne pas envoyer les archives de sauvegarde
+*.tar.gz
+
+# Ignorer les fichiers temporaires de l'OS
+.DS_Store
